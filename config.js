@@ -3,7 +3,7 @@
 module.exports = {
   TOKEN: "",
   language: "en",
-  ownerID: ["1004206704994566164", ""], 
+  ownerID: ["508695325003743235", ""], 
   mongodbUri : "mongodb+srv://shiva:shiva@musicbotyt.ouljywv.mongodb.net/?retryWrites=true&w=majority",
   spotifyClientId : "d92baed9605a45a39ed7c2a2d960b1c1",
   spotifyClientSecret : "e9b29f6739de4315bc03b6d8a8e93b03",
@@ -14,7 +14,7 @@ module.exports = {
   activityType: "LISTENING",  // Available activity types : LISTENING , PLAYING
   SupportServer: "https://discord.gg/xQF9f9yUEM",
   embedTimeout: 5,
-  showProgressBar: false,  // Show progress bar in track embed
+  showProgressBar: true,  // Show progress bar in track embed
   showVisualizer: false,  // Show visualizer on music card (disabled for low-memory optimization)
   generateSongCard: true,  // custom song card image, if false uses thumbnail
   // Performance optimizations for low-memory environments (512MB RAM)
