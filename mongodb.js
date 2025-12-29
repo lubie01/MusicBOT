@@ -5,18 +5,19 @@ require('dotenv').config();
 
 let client; 
 
-if (config.mongodbUri) {
-    const uri = config.mongodbUri;
+//if (config.mongodbUri) {
+  //  const uri = config.mongodbUri;
+  const uri = process.env.MANGO
     client = new MongoClient(uri);
-} else {
-    try {
-        const { getLangSync } = require('./utils/languageLoader.js');
-        const lang = getLangSync();
-        console.warn("\x1b[33m[ WARNING ]\x1b[0m " + (lang.console?.mongodb?.uriNotDefined || "MongoDB URI is not defined in the configuration."));
-    } catch (e) {
-        console.warn("\x1b[33m[ WARNING ]\x1b[0m MongoDB URI is not defined in the configuration.");
-    }
-}
+// } else {
+//     try {
+//         const { getLangSync } = require('./utils/languageLoader.js');
+//         const lang = getLangSync();
+//         console.warn("\x1b[33m[ WARNING ]\x1b[0m " + (lang.console?.mongodb?.uriNotDefined || "MongoDB URI is not defined in the configuration."));
+//     } catch (e) {
+//         console.warn("\x1b[33m[ WARNING ]\x1b[0m MongoDB URI is not defined in the configuration.");
+//     }
+// }
 
 async function connectToDatabase() {
     try {
